@@ -21,3 +21,25 @@ function sortArray(array) {
 }
 
 // or
+
+function sortArray(array) {
+  let oddNumbers = [];
+  if (array === []) {
+    return array;
+  }
+
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] % 2 === 1) {
+      oddNumbers.push(array[i]);
+    }
+  }
+  
+  let finalArray = oddNumbers.sort((a, b) => a-b);
+
+  for (let j = 0; j < array.length; j++) {
+    if (array[j] % 2 === 0) {
+      finalArray.splice(j, 0, array[j]);
+    }
+  }
+  return finalArray;
+}
