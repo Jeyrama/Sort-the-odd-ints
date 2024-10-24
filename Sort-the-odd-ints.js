@@ -19,3 +19,5 @@ function sortArray(array) {
     return num%2 ? oddList.pop() : num;
   });
 }
+
+// or
