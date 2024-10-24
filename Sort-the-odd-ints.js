@@ -11,3 +11,11 @@ Examples:
 
 
 // Solution
+
+function sortArray(array) {
+  let oddList = array.filter( num => num%2 ).sort( (a,b) => b-a );
+
+  return array.map( num => {
+    return num%2 ? oddList.pop() : num;
+  });
+}
